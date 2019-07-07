@@ -4,6 +4,7 @@
     <script src="https://statics.teams.microsoft.com/sdk/v1.4.2/js/MicrosoftTeams.min.js" crossorigin="anonymous"></script>
     <script>
       function teamsIntialize(){
+        microsoftTeams.initialize();
         microsoftTeams.settings.registerOnSaveHandler(function(saveEvent){
           var radios = document.getElementsByName("maptype");
           if (radios[0].checked) {
@@ -26,9 +27,9 @@
 
           saveEvent.notifySuccess();
       });
-      function onClick() {
+     }
+     function onClick() {
           microsoftTeams.settings.setValidityState(true);
-      }
      }
     </script>
   </head>
