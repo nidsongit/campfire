@@ -5,30 +5,12 @@
     <script>
       function teamsIntialize(){
         microsoftTeams.initialize();
-        microsoftTeams.settings.registerOnSaveHandler(function(saveEvent){
-          var radios = document.getElementsByName("maptype");
-          if (radios[0].checked) {
-               microsoftTeams.settings.setSettings({
-                 entityId: "bing",
-                 contentUrl: "https://www.bing.com/maps/embed",
-                 suggestedDisplayName: "Bing Map",
-                 websiteUrl: "https://www.bing.com/maps",
-                 removeUrl: "https://teams-get-started-sample.azurewebsites.net/tabremove.html",
-              });
-          } else {
-               microsoftTeams.settings.setSettings({
-                 entityId: "google",
-                 contentUrl: "https://www.google.com/maps/embed",
-                 suggestedDisplayName: "Google Map",
-                 websiteUrl: "https://www.google.com/maps",
-                 removeUrl: "https://teams-get-started-sample.azurewebsites.net/tabremove.html",
-              });
-          }
-
-          saveEvent.notifySuccess();
-      });
-     }
-     function onClick() {
+        microsoftTeams.settings.setSettings({
+           entityId: "campfire",
+           contentUrl: "https://nidsongit.github.io/campfire/dashboard.html",
+           suggestedDisplayName: "Campfire Dashboard",
+           websiteUrl: "https://nidsongit.github.io/campfire"
+        });
           microsoftTeams.settings.setValidityState(true);
      }
     </script>
