@@ -1,8 +1,14 @@
 <html>
   <head>
     <title>Campfire - Real time campaign monitoring and insights </title>
+    <script src="https://statics.teams.microsoft.com/sdk/v1.4.2/js/MicrosoftTeams.min.js" crossorigin="anonymous"></script>
+    <script>
+      function teamsIntialize(){
+        microsoftTeams.initialize()
+      }
+    </script>
   </head>
-  <body>
+  <body onload="teamsIntialize()">
     <h1>Campfire</h1>
     <h2>Real time campaign monitoring and insights</h2>
   </body>
